@@ -7,8 +7,9 @@ import Input from "../../components/Input";
 import Validator from "../../components/Validator";
 import { icons } from "../../constants/icons";
 import { theme } from "../../constants/theme";
+import { SCREENS } from "../../navigation/screens";
 
-const RegistrationScreen: React.FC = () => {
+const RegistrationScreen: React.FC = ({ navigation }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   return (
@@ -43,7 +44,11 @@ const RegistrationScreen: React.FC = () => {
         </View>
       </View>
       <View style={styles.buttonContainer}>
-        <Button>Sign Up</Button>
+        <Button
+          onPress={() => navigation.navigate(SCREENS.SEARCH_RESULTS_SCREEN)}
+        >
+          Sign Up
+        </Button>
       </View>
     </SafeAreaView>
   );
@@ -84,7 +89,6 @@ const styles = StyleSheet.create({
 
   inputsContainer: {
     width: "100%",
-    rowGap: 16,
     paddingHorizontal: 24,
   },
 

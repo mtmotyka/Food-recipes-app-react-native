@@ -55,12 +55,13 @@ const styles = StyleSheet.create({
     width: "100%",
     paddingVertical: 20,
     paddingRight: 25,
-    outlineStyle: "none",
+    marginBottom: 16,
   },
 
   iconContainer: {
     position: "absolute",
     left: 25,
+    top: 20,
   },
 
   inputContainer: {

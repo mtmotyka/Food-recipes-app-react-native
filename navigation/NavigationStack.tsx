@@ -2,6 +2,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import * as React from "react";
 import RegistrationScreen from "../screens/RegistrationScreen/RegistrationScreen";
+import SearchResultsScreen from "../screens/SearchResultsScreen/SearchResultsScreen";
 import StartScreen from "../screens/StartScreen/StartScreen";
 import { SCREENS } from "./screens";
 
@@ -9,6 +10,7 @@ export type NavigationStackParams = {
   [SCREENS.START]: undefined;
   [SCREENS.TAB_NAVIGATOR]: undefined;
   [SCREENS.REGISTRATION_SCREEN]: undefined;
+  [SCREENS.SEARCH_RESULTS_SCREEN]: undefined;
 };
 
 const NavigationStack = () => {
@@ -28,6 +30,11 @@ const NavigationStack = () => {
       <Stack.Screen
         name={SCREENS.REGISTRATION_SCREEN}
         component={RegistrationScreen}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name={SCREENS.SEARCH_RESULTS_SCREEN}
+        component={SearchResultsScreen}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>
