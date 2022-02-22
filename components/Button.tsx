@@ -27,6 +27,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 120,
     paddingVertical: 19,
     textAlign: "center",
+    width: "100%",
   },
   text: {
     color: "#fff",
